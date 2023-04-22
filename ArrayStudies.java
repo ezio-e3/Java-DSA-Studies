@@ -7,7 +7,7 @@ public class ArrayStudies {
     int[] otherNumbers = new int[]{1,2,3,4,5};
     //declaring a multidimensional array
     int[][] numberGrid = new int[3][3];
-    int[][] numbersGrid = {{1,2},{3,4},{5,6},{7,8},{0,9}};
+    int[][] numbersGrid = { {1,2,3,}, {4,5,6}, {7,8,9} };
 
     public void printArrayElements(){
         for (int i = 0; i < otherNumbers.length; i++) {
@@ -15,13 +15,18 @@ public class ArrayStudies {
         }
     }
     public void print2DArrays(){
-        for (int i = 0; i < numbersGrid.length; i++){
-            for (int j = 0; j < numbersGrid.length; j++){
-                System.out.println();
-            }
-        }
+        System.out.println(Arrays.deepToString(numbersGrid));
     }
 
+    public void sumOfArray(){
+        var sum = 0;
+        for (int i = 0; i < otherNumbers.length; i++) {
+            sum += otherNumbers[i];
+        }
+        System.out.println(sum);
+    }
+    //SEARCHING ALGORITHMS : Searching an Array
+    // Two classifications of search algorithm are: sequential search and interval search
 
 
 }
