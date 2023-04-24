@@ -1,6 +1,8 @@
 public class DSA {
     static ArrayStudies arrays = new ArrayStudies();
     public static void main(String[] args) {
-        arrays.sumOfArray();
+        int[] arr = {1,2,3,4,5,6,7,8,9,10};
+        int result = arrays.binarySearch(arr,3);
+        System.out.println(result);
     }
 }
