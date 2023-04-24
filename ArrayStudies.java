@@ -25,8 +25,8 @@ public class ArrayStudies {
         }
         System.out.println(sum);
     }
-    //SEARCHING ALGORITHMS : Searching an Array
-    // Two classifications of search algorithm are: sequential search and interval search
+
+
 
 
 }
