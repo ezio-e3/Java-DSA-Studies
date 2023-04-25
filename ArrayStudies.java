@@ -75,5 +75,19 @@ public class ArrayStudies {
         return -1;
     }
 
-
+    // Given an array arr[] of size N-1 with integers in the range of [1, N], the task is to find the missing number from the first N integers.
+    // Note: There are no duplicates in the list
+    public int findMissingNumber(int[] arr, int number){
+        int sum = Arrays.stream(arr).sum();
+        for (int i = number; i > 0; i--) {
+            // because index starts from 0 and 1 number is missing hence n-2
+            int currentNumber = arr[i-2];
+            int subtractCurrentNumber = sum - currentNumber;
+            int subtractIndex = sum - i;
+            if (subtractIndex != subtractCurrentNumber){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
