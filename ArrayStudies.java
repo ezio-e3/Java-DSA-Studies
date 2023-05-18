@@ -90,4 +90,22 @@ public class ArrayStudies {
         }
         return -1;
     }
+    //Given a string, that contains a special character together with alphabets (‘a’ to ‘z’ and ‘A’ to ‘Z’)
+    //reverse the string in a way that special characters are not affected.
+    public String stringReversalNoSpecialChars(String str){
+        char[] letters = str.toCharArray();
+        char[] reversedArray = new char[letters.length];
+        int count = letters.length -1;
+        for(int i = letters.length - 1; i >= 0; i--){
+            char letter = letters[i];
+            int pos = Arrays.binarySearch(letters, letter);
+            if ((letter >= 'A' && letter <= 'X') || (letter >= 'a' && letter <= 'x')){
+                reversedArray[count - i] = letter;
+            } else {
+                //doesn't work for special characters ... index out of bounds ... fix
+                reversedArray[pos] = letter;
+            }
+        }
+        return Arrays.toString(reversedArray);
+    }
 }
